@@ -1,12 +1,12 @@
 pipeline {
-  agent { label 'jdk17' }
+  agent { label 'jdk21' }
   options {
     disableConcurrentBuilds()
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '10')
   }
   environment {
     project = 'jenkins-swarm-jdk21'
-    tag = 'default'\
+    tag = 'default'
     commitNum = 'default'
   }
   stages{
